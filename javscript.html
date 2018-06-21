@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
     <style>
-    .btn {
+        .btn {
+            margin-top: 15px;
     border: none;
     color: white;
     padding: 14px 28px;
     font-size: 16px;
-    cursor: pointer;
+    cursor:grab;
 }
 
 .success {background-color: #4CAF50;} /* Green */
 .success:hover {background-color: #46a049;}
-
-.info {background-color: #2196F3;} /* Blue */
+        .info {background-color: #2196F3;} /* Blue */
 .info:hover {background: #0b7dda;}
 
 .warning {background-color: #ff9800;} /* Orange */
@@ -25,24 +24,64 @@
 
 .default {background-color: #e7e7e7; color: black;} /* Gray */ 
 .default:hover {background: #ddd;}
-    </style>
-
+        </style>
     </head>
-    <body style="background-color: aqua;background-image: url('img.jpg')">
-        <h2 style="text-align: center;text-shadow: 20px;">Simple JavaScript Program</h2>
-        <b><p  style="text-align: center;text-shadow: 20px;">This is the simple HTML file that uses JavaScript to use buttons.</p></b>
+<body style="background-color: aqua;background-image: url('img.jpg')">
 
-    <div id="result">
-        
-        </div>
-        <button class="btn success" style="margin: 40px 20px 20px 80px">Calculate Square</button>
-        <button class="btn info" style="margin: 20px 20px 20px 20px">Calculate Addition</button>
-        <button class="btn warning" style="margin:20px 20px 20px 20px">Calculate Subtraction</button>
-        <button class="btn danger" style="margin:20px 20px 20px 20px">Calculate Multiplication</button>
-        <button class="btn default" style="margin: 20px 20px 20px 20px">Calculate Division</button>
-        <script>
-        
-        </script>
-    </body>
+<h1 style="text-align: center;text-shadow: 20px;"> Simple JavaScript Program</h1>
+
+<b><p  style="text-align: center;text-shadow: 20px;">This is the simple HTML file that uses JavaScript to use buttons.</p></b>
+<button onclick = "myclick1()" class="btn success" style="margin-left: 50px">Calculate Square</button>
+    <button onclick = "myclick2()" class="btn info" style="margin-left: 50px">Calculate Addition</button>
+    <button onclick = "myclick3()" class="btn danger" style="margin-left:50px">Calculate Subtraction</button>
+    <button onclick = "myclick4()" class="btn warning" style="margin-left: 50px">Calculate Multiplication</button>
+   <button onclick = "myclick5()" class="btn default" style="margin-left: 50px">Calculate Division</button>
+   
+    <div id="div1" style="margin-left: 50px">
     
+    </div>
+        <div id="div2" style="margin-left: 280px">
+    
+    </div>
+        <div id="div3" style="margin-left: 520px">
+    
+    </div>
+        <div id="div4" style="margin-left: 780px">
+    
+    </div>
+        <div id="div5" style="margin-left: 1050px">
+    
+    </div>
+<script>
+    var a= 10;
+    var b= 20;
+
+function myclick1()
+    {
+       document.getElementById("div1").innerHTML += "<p>The square is = "+a*a+"</p>";
+    }
+    function myclick2()
+    {
+        var c= a + b;
+       document.getElementById("div2").innerHTML += "<p>The sum of "+ a+" and "+ b+ " is  = "+ c+"</p>";
+    }
+    function myclick3()
+    {
+        var c = b - a;
+       document.getElementById("div3").innerHTML += "<p>The difference of "+ b+" and "+ a+ " is  = "+ c+"</p>";
+    }
+     function myclick4()
+    {
+        var c = b * a;
+       document.getElementById("div4").innerHTML += "<p>The product of "+ b+" and "+ a+ " is  = "+ c+"</p>";
+    }
+     function myclick5()
+    {
+        var c = b / a;
+       document.getElementById("div5").innerHTML += "<p>The division of "+ b+" and "+ a+ " is  = "+ c+"</p>";
+    }
+    
+        
+</script>
+</body>
 </html>
